@@ -1,0 +1,19 @@
+
+public class GeradorTabuada {
+
+	public static void main(String[] args) {
+		// Criar as variáveis
+		int num_tabuada,valor_tabuada;
+		
+		// Implementar um valor da tabuada
+		num_tabuada=5;
+		
+		// Criar o laço de repetição
+		for(int contador=1; contador<=10;contador++) {
+			valor_tabuada=num_tabuada*contador;
+			System.out.println(num_tabuada+" x ";contador+" =");
+		}
+
+	}
+
+}

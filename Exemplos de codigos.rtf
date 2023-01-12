@@ -1,0 +1,293 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang22 Criando sistema de Matriz, com consulta de Registros e Switch Case\par
+=====================================================\par
+import java.util.Scanner;\par
+\par
+public class Concatenacao \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\par
+\tab\tab //Criando as vari\'e1veis matriz\par
+\tab\tab\tab\tab String alunos[]= \{"Givanildo","Tarciano","Adroaldo"\};\par
+\tab\tab\tab\tab int nota1[] = \{5,2,5\};\par
+\tab\tab\tab\tab int nota2[] = \{10,3,8\};\par
+\tab\tab\tab\tab float media;\par
+\tab\tab\par
+\tab\tab\tab\tab System.out.println("========================");\par
+\tab\tab\tab\tab System.out.println("1 - Consulta Registro");\par
+\tab\tab\tab\tab System.out.println("2 - Consulta tudo");\par
+\tab\tab\tab\tab System.out.println("3 - Sair do Programa");\par
+\tab\tab\tab\tab System.out.println("========================");\tab\par
+\tab\tab\tab\tab System.out.println("Escolha a op\'e7\'e3o desejada:");\par
+\tab\tab\tab\tab\tab\tab Scanner teclado = new Scanner(System.in);\par
+\tab\tab\tab\tab\tab\tab int opcao;\par
+\tab\tab\tab\tab\tab\tab opcao=teclado.nextInt();\par
+\tab\tab\tab\tab\tab\tab switch(opcao) \{\par
+\tab\tab\tab\tab\tab\tab case 1:\par
+\tab\tab\tab\tab\tab\tab\tab // Criando uma vari\'e1vel para gerar um filtro\par
+\tab\tab\tab\tab\tab\tab\tab System.out.println("Digite o RA do aluno a ser pesquisado: ");\par
+\tab\tab\tab\tab\tab\tab\tab int ra;\par
+\tab\tab\tab\tab\tab\tab\tab ra=teclado.nextInt();\par
+\tab\tab\tab\tab\tab\tab\tab media=(nota1[ra]+nota2[ra])/2;\par
+\tab\tab\tab\tab\tab\tab\tab System.out.println(alunos[ra]+ " N1 -"+nota1[ra]+" N2 -"+nota2[ra]+" M\'e9dia: "+media);\par
+\tab\tab\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab\tab\tab case 2:\par
+\tab\tab\tab\tab\tab\tab\tab for(int contador=0; contador<alunos.length;contador++) \{\par
+\tab\tab\tab\tab\tab\tab\tab\tab media=(nota1[contador]+nota2[contador])/2;\par
+\tab\tab\tab\tab\tab\tab\tab\tab System.out.println(alunos[contador]+ " N1 -"+nota1[contador]+" N2 -"+nota2[contador]+" M\'e9dia: "+media);\par
+\tab\tab\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab\tab\tab case 3:\par
+\tab\tab\tab\tab\tab\tab\tab System.out.println("Fim do sistema");\par
+\tab\tab\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab\tab\tab default:\par
+\tab\tab\tab\tab\tab\tab\tab System.out.println("Op\'e7\'e3o Inv\'e1lida execute Novamente");\par
+\tab\tab\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab\tab\par
+\tab\tab\tab\tab\tab\tab\par
+\tab\tab\tab\tab\tab\tab\par
+\tab\tab\tab\tab\tab\tab\par
+\tab\tab\tab\tab\tab\tab\}\par
+\tab\}\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+Sistema de procura de registros\par
+=========================\par
+import java.util.Scanner;\par
+\par
+public class Concatenacao \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab\tab\par
+\tab\tab //Criando uma vari\'e1vel do tipo matriz\par
+\tab\tab String [] nome=\{"Ricardo","Alexandre","Pedro","Camila"\};\par
+\tab\tab\tab\tab\tab\tab\par
+\tab\tab //Criando um sistema de consulta\par
+\tab\tab int matricula;\par
+\tab\tab\par
+\tab\tab // Criando a chamada de um objeto da biblioteca\par
+\tab\tab Scanner teclado = new Scanner(System.in);\par
+\tab\tab System.out.println("Digite o n\'famero da matr\'edcula:");\par
+\tab\tab matricula=teclado.nextInt();\tab\tab\par
+\tab\tab\par
+\tab\tab System.out.println(nome[matricula]);\par
+\tab\tab\par
+\tab\tab\par
+\tab\tab\}\par
+\tab\}\par
+\par
+==============================\par
+\par
+Mostrando todos os registros da nossa matriz\par
+===================================\par
+import java.util.Scanner;\par
+\par
+public class Concatenacao \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab //Criando campos de matrizes\par
+\tab\tab String [] nome= \{"Ricardo","Brenda"\};\par
+\tab\tab int [] idade= \{49,19\};\par
+\tab\tab String [] endereco= \{"Rua Tito","Rua F\'e1bia"\};\par
+\tab\tab\par
+\tab\tab //Mostrando os conte\'fados dos campos e seu registro \par
+\tab\tab //OBS. Estou mostrando v\'e1rios campos mas somente um registro\par
+\tab\tab //System.out.println("O seu nome \'e9 "+nome[0]+ " e voc\'ea tem "+idade[0]+ " anos");\par
+\tab\par
+\tab\par
+\tab\tab //Mostrando todos os registros da nossa matriz\par
+\tab\tab System.out.println(nome.length);\par
+\tab\tab System.out.println();\par
+\tab\tab\par
+\tab\tab //Criando um la\'e7o de repeti\'e7\'e3o\par
+\tab\tab for (int contador=0; contador<nome.length; contador++) \{\par
+\tab\tab\tab System.out.println(nome[contador]+" - "+idade[contador]+" - "+endereco[contador]);\par
+\par
+\tab\par
+\tab\tab\par
+\tab\tab\}\par
+\tab\}\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+Exemplo de Concatena\'e7\'e3o de Valores\par
+=============================\par
+\par
+public class Concatenacao \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab //Criando uma vari\'e1vel\par
+\tab\tab int i=1;\par
+\tab\tab int resultado;\par
+\tab\tab resultado=i+10;\par
+\tab\tab System.out.println(i+" + "+10+"="+resultado);\par
+\tab\}\par
+\par
+\}\par
+=============================\par
+\par
+\par
+\par
+\par
+import java.util.Scanner;\par
+\par
+public class Calculadora \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab //Criando as vari\'e1veis de controle\par
+\tab\tab int valor1,valor2,opcao,resultado;\par
+\tab\tab //Fazer a chamada do nosso objeto Scanner\par
+\tab\tab Scanner teclado = new Scanner(System.in);\par
+\tab\tab //Mensagens de intera\'e7\'e3o com o nosso usu\'e1rio\par
+\tab\tab System.out.println("Digite o primeiro valor: ");\par
+\tab\tab valor1=teclado.nextInt();\par
+\tab\tab System.out.println("Digite o segundo valor: ");\par
+\tab\tab valor2=teclado.nextInt();\par
+\tab\tab //Criando um menu\par
+\tab\tab System.out.println();\par
+\tab\tab System.out.println("Escolha a op\'e7\'e3o abaixo desejada");\par
+\tab\tab System.out.println("===============================");\par
+\tab\tab System.out.println("1 - Adi\'e7\'e3o");\par
+\tab\tab System.out.println("2 - Subtra\'e7\'e3o");\par
+\tab\tab System.out.println("3 - Divis\'e3o");.\par
+\tab\tab System.out.println("4 - Multiplica\'e7\'e3o");\par
+\tab\tab System.out.println("===============================");\par
+\tab\tab System.out.println("Digite o n\'famero da op\'e7\'e3o:");\par
+\tab\tab opcao=teclado.nextInt();\par
+\tab\tab\par
+\par
+\par
+\tab\tab\par
+\tab\tab //System.out.println("1 - Adi\'e7\'e3o"+"\\n"+"2 - Subtra\'e7\'e3o"+"\\n"+"3 - Divis\'e3o");\par
+\tab\tab Criando sistema de Matriz, com consulta de Registros e Switch Case\par
+=====================================================\par
+import java.util.Scanner;\par
+\par
+public class Concatenacao \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\par
+\tab\tab //Criando as vari\'e1veis matriz\par
+\tab\tab\tab\tab String alunos[]= \{"Givanildo","Tarciano","Adroaldo"\};\par
+\tab\tab\tab\tab int nota1[] = \{5,2,5\};\par
+\tab\tab\tab\tab int nota2[] = \{10,3,8\};\par
+\tab\tab\tab\tab float media;\par
+\tab\tab\par
+\tab\tab\tab\tab System.out.println("========================");\par
+\tab\tab\tab\tab System.out.println("1 - Consulta Registro");\par
+\tab\tab\tab\tab System.out.println("2 - Consulta tudo");\par
+\tab\tab\tab\tab System.out.println("3 - Sair do Programa");\par
+\tab\tab\tab\tab System.out.println("========================");\tab\par
+\tab\tab\tab\tab System.out.println("Escolha a op\'e7\'e3o desejada:");\par
+\tab\tab\tab\tab\tab\tab Scanner teclado = new Scanner(System.in);\par
+\tab\tab\tab\tab\tab\tab int opcao;\par
+\tab\tab\tab\tab\tab\tab opcao=teclado.nextInt();\par
+\tab\tab\tab\tab\tab\tab switch(opcao) \{\par
+\tab\tab\tab\tab\tab\tab case 1:\par
+\tab\tab\tab\tab\tab\tab\tab // Criando uma vari\'e1vel para gerar um filtro\par
+\tab\tab\tab\tab\tab\tab\tab System.out.println("Digite o RA do aluno a ser pesquisado: ");\par
+\tab\tab\tab\tab\tab\tab\tab int ra;\par
+\tab\tab\tab\tab\tab\tab\tab ra=teclado.nextInt();\par
+\tab\tab\tab\tab\tab\tab\tab media=(nota1[ra]+nota2[ra])/2;\par
+\tab\tab\tab\tab\tab\tab\tab System.out.println(alunos[ra]+ " N1 -"+nota1[ra]+" N2 -"+nota2[ra]+" M\'e9dia: "+media);\par
+\tab\tab\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab\tab\tab case 2:\par
+\tab\tab\tab\tab\tab\tab\tab for(int contador=0; contador<alunos.length;contador++) \{\par
+\tab\tab\tab\tab\tab\tab\tab\tab media=(nota1[contador]+nota2[contador])/2;\par
+\tab\tab\tab\tab\tab\tab\tab\tab System.out.println(alunos[contador]+ " N1 -"+nota1[contador]+" N2 -"+nota2[contador]+" M\'e9dia: "+media);\par
+\tab\tab\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab\tab\tab case 3:\par
+\tab\tab\tab\tab\tab\tab\tab System.out.println("Fim do sistema");\par
+\tab\tab\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab\tab\tab default:\par
+\tab\tab\tab\tab\tab\tab\tab System.out.println("Op\'e7\'e3o Inv\'e1lida execute Novamente");\par
+\tab\tab\tab\tab\tab\tab\tab break;\par
+\tab\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab\tab\par
+\tab\tab\tab\tab\tab\tab\par
+\tab\tab\tab\tab\tab\tab\par
+\tab\tab\tab\tab\tab\tab\par
+\tab\tab\tab\tab\tab\tab\}\par
+\tab\}\par
+\tab\tab\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+switch (opcao) \{\par
+\tab\tab case 1:\par
+\tab\tab\tab\par
+\tab\tab\tab resultado = valor1+valor2;\par
+\tab\tab\tab System.out.println("A soma dos valores \'e9 :"+resultado);\par
+\tab\tab\tab //System.out.println("A soma dos valores: " + (valor1 + valor2));\par
+\tab\tab\tab break;\par
+\tab\tab case 2:\par
+\tab\tab\tab\par
+\tab\tab\tab resultado=valor1-valor2;\par
+\tab\tab\tab System.out.println("A subtra\'e7\'e3o dos valores \'e9: "+resultado);\par
+\tab\tab\tab break;\par
+\tab\tab case 3:\par
+\tab\tab\tab resultado=valor1/valor2;\par
+\tab\tab\tab System.out.println("A divis\'e3o dos valores \'e9: "+resultado);\par
+\tab\tab\tab break;\par
+\tab\tab case 4:\par
+\tab\tab\tab resultado=valor1*valor2;\par
+\tab\tab\tab System.out.println("A multiplica\'e7\'e3o dos valores \'e9: "+resultado);\par
+\tab\tab\tab break;\par
+\tab\par
+\tab\tab default:\par
+\tab\tab System.out.println("ERROR!!!! Op\'e7\'e3o Inv\'e1lida");\tab\par
+\tab\tab\}\par
+\tab\tab\par
+\tab\tab\par
+\tab\}\par
+\par
+\}\par
+\par
+\par
+\par
+public class ExecutaMatriz \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab //Criando uma vari\'e1vel do tipo Matriz\par
+\tab\tab String[] carros= \{"HB20","Uno","Gol","Sandero","C3","Opala","Tempra"\};\par
+\tab\tab\par
+\tab\tab //Mostrando o conte\'fado da vari\'e1vel do tipo Matriz\par
+\tab\tab /*System.out.println(carros[0]);\par
+\tab\tab System.out.println(carros[1]);\par
+\tab\tab System.out.println(carros[2]);\par
+\tab\tab System.out.println(carros[3]);\par
+\tab\tab System.out.println(carros[4]);*/\par
+\tab\tab\par
+\tab\tab // Contando a quantidade de registros de uma matriz \par
+\tab\tab System.out.println(carros.length);\par
+\tab\tab\par
+\tab\tab int contagem=1;\par
+\tab\tab //Criando um laco de repeti\'e7\'e3o para mostrar os registros\par
+\tab\tab for(int contador=0;contador<carros.length;contador++) \{\par
+\tab\tab\tab contagem=contagem+contador;\par
+\tab\tab\tab System.out.println(contagem+" - "+carros[contador]);\par
+\tab\tab\}\par
+\par
+\tab\}\par
+\par
+\}\par
+}
+ 

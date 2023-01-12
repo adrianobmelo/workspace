@@ -1,0 +1,19 @@
+// A classe do nosso projeto
+public class AnaliseCondicional {
+   //Iremos criar os métodos
+	public static void main(String[] args) {
+		// Criando uma variáveis
+		int tempo;
+		
+		//Vamos implementar a variável
+		tempo = 10;
+		
+		// Criando um processo condicional
+		if(tempo<=12) {
+			System.out.println("Olá bom diaaaa");
+		}else
+			System.out.println("Olá boa noite");
+
+	}
+
+}

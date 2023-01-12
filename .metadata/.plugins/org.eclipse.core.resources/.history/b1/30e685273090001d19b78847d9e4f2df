@@ -1,0 +1,21 @@
+
+public class EstudosTestes {
+
+	public static void main(String[] args) {
+		int valor1, valor2, opcao;
+		
+		valor1 = 10;
+		valor2 = 10;
+		opcao = 1;
+		
+		System.out.println("Escolha a opcao abaixo desejada");
+		System.out.println("===============================");
+		System.out.println("1 - Adicao");
+		System.out.println("2 - Subtracao");
+		System.out.println("3 - Multiplicacao");
+		System.out.println("4 - Divisao");
+		System.out.println("===============================");
+
+	}
+
+}

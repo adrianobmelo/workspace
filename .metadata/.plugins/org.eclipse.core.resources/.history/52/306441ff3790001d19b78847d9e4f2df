@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class EstudosTestes {
+
+	public static void main(String[] args) {
+		int tempo;
+		
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Digite que horas sao:");
+		tempo = teclado.nextInt();
+		
+		
+		if(tempo <=12) {
+			System.out.println("Ola bom diaaaa");
+	if else {
+			System.out.println("Boa tarde galera!");
+
+	}else
+		System.out.println("Boa noite e bons sonhos");
+
+}

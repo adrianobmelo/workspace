@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class EstudosTestes {
+
+	public static void main(String[] args) {
+		int tempo;
+		
+		Scanner teclado = new Scanner(System.in);
+		tempo = teclado.nextInt();
+		
+		
+		if(tempo <=12) {
+			System.out.println("Ola bom diaaaa");
+		}else
+			System.out.println("Boa tarde galera!");
+
+	}
+
+}

@@ -1,0 +1,25 @@
+
+public class Notas {
+
+	public static void main(String[] args) {
+		// Criando as variáveis matriz
+		String alunos[]= {"Givanildo","Tarciano", "Adroaldo"};
+		int nota1[] = {5,6,7};
+		int nota2 [] = {4,8,9};
+		float media;
+		
+		// Criar laço de repetição
+		for(int contador=0; contador<alunos.length;contador++) {
+		
+			media=(nota1[contador]+nota2[contador])/2;			
+			System.out.println(alunos[contador]+" "+nota1[contador]+" "+nota2[contador]+ " = "+media);
+			media=0;
+			
+		}
+		
+		/*media=(nota1[0]+nota2[0])/2;
+		media=(nota1[0]+nota2[0]+"="+media);*/
+
+	}
+
+}
